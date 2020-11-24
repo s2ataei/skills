@@ -4,8 +4,10 @@ import Students from './Components/StudentList/StudentList';
 
 function App() {
   return (
-    <div className="App">
-      <Students/>
+    <div className='app'>
+      <div className='content'>
+        <Students/>
+      </div>
     </div>
   );
 }

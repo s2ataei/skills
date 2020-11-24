@@ -1,4 +1,6 @@
 import React from 'react';
+import Student from '../Student/Student'
+import './StudentList.css'
 
 class StudentList extends React.Component {
     constructor(props) {
@@ -9,7 +11,7 @@ class StudentList extends React.Component {
         }
     }
 
-    render() {
+    componentDidMount() {
         fetch('https://api.hatchways.io/assessment/students', {
             headers: {
                 Accept: 'application/json'
@@ -17,16 +19,17 @@ class StudentList extends React.Component {
             method: 'GET',
             mode: 'cors',
         })
-        .then(res=>res.json())
-        .then(fetchStudents => {
-            this.setState({students:fetchStudents.students});
-        })
+            .then(res=>res.json())
+            .then(fetchStudents => {
+                this.setState({students:fetchStudents.students});
+            })
+    }
+
+    render() {
         return (
-            {this.state.students.map(student => {
-                return (
-                    <div>{student.firstName}</div>
-                )
-            })}
+            <div className='student-list'>
+                {this.state.students.map((student) => <Student {...student} />)}
+            </div>
         )
     }
     

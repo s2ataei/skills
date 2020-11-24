@@ -1,0 +1,40 @@
+.student {
+    display: flex;
+    background-color: white;
+}
+
+.student:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.student-pic {
+    flex: 1;
+    padding: 1em;
+}
+
+.student-pic > div {
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+}
+
+.student-details {
+    flex: 4;
+}
+
+.student-details > h1 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 0.25em 0;
+}
+
+.student-details > div {
+    font-size: 14px;
+    font-family: Raleway;
+    margin-left: 1em;
+    line-height: 1.3;
+}
