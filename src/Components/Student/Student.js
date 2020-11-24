@@ -1,5 +1,8 @@
 import React from 'react';
 import './Student.css';
+import { ReactComponent as Minus } from '../../icons/minus.svg';
+import { ReactComponent as Plus } from  '../../icons/add.svg';
+
 
 const average = (nums) => {
   const sum = nums.reduce((sum, num) => sum + num, 0)
@@ -32,11 +35,13 @@ const Student = ({
           <div>Skill: {skill}</div>
           <div>Average: {average(grades.map(Number))}%</div>
         </div>
-        <div style={{ height: isOpen ? 100 : 0, overflow: 'hidden' }}>
-          whatever info
+        <div className="dropdown" style={{ height: isOpen ? 160 : 0, overflow: 'hidden' }}>
+          {grades.map((grade,index) => 
+            <div>Test {index+1}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{grade}%</div>
+          )} 
         </div>
       </div>
-      <button onClick={event => setOpen(!isOpen)}></button>
+      <button className="dropdown-button" onClick={event => setOpen(!isOpen)}>{isOpen ? <Minus /> : <Plus/>}</button>
     </div>
   )
 }
