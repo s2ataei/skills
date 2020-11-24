@@ -1,6 +1,5 @@
 .student {
     display: flex;
-    background-color: white;
 }
 
 .student:not(:last-child) {
@@ -34,7 +33,6 @@
 
 .student-details > div {
     font-size: 14px;
-    font-family: Raleway;
     margin-left: 1em;
     line-height: 1.3;
 }

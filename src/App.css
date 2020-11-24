@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: Raleway, sans-serif;
 }
 
 html {
@@ -33,8 +34,28 @@ body {
   height: 100%;
   width: 100%;
   max-width: 800px;
-  overflow-y: scroll;
+  overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 8px;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.search {
+  margin: 0.5em;
+  padding: 0.5em 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.search:focus {
+  border-bottom-color: #111;
+}
+
+.results {
+  overflow-y: scroll;
 }

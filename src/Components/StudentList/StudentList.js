@@ -28,7 +28,13 @@ class StudentList extends React.Component {
     render() {
         return (
             <div className='student-list'>
-                {this.state.students.map((student) => <Student {...student} />)}
+                {this.state.students
+                .filter((student) => {
+                    if (this.props.filter === '') return true
+                    return student.firstName.toLowerCase().includes(this.props.filter.toLowerCase())
+                    || student.lastName.toLowerCase().includes(this.props.filter.toLowerCase())
+                })
+                .map((student) => <Student {...student} />)}
             </div>
         )
     }
