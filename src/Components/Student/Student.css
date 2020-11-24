@@ -63,3 +63,28 @@
 .dropdown-button:focus {
     outline: none;
 }
+
+.search {
+    font-size:12px;
+}
+
+.tags {
+    margin-top:20px;   
+    margin-bottom: 10px;
+}
+
+span.tag {
+    margin-right:4px;
+    background-color: #ccc;
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 12px;
+}
+
+
+.tag span{
+    border-radius: 3px;
+    padding: 7px;
+    font-size: 12px;
+
+}
