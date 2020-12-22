@@ -1,3 +1,5 @@
+# React Skills Interview Concepts
+This app makes requests to an API endpoint to get data about users, and displays the data in a front-end built fully React, HTML and CSS. 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
